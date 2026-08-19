@@ -35,6 +35,8 @@
     <g id="icon-globe"><circle cx="12" cy="12" r="8.5" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M3.5 12h17M12 3.5c2.6 2.4 4 5.3 4 8.5s-1.4 6.1-4 8.5c-2.6-2.4-4-5.3-4-8.5s1.4-6.1 4-8.5Z" stroke="currentColor" stroke-width="1.6" fill="none"/></g>
     <g id="icon-check"><circle cx="12" cy="12" r="9" fill="currentColor"/><path d="m7.5 12.5 2.8 2.8L16.7 9" stroke="var(--ink)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
     <g id="icon-insta"><rect x="3.5" y="3.5" width="17" height="17" rx="5" stroke="currentColor" stroke-width="1.7" fill="none"/><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.7" fill="none"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor"/></g>
+    <g id="icon-star"><path d="M12 2.5l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.3l-5.8 3.1 1.1-6.5-4.7-4.6 6.5-.9L12 2.5Z" fill="currentColor"/></g>
+    <g id="icon-google"><path d="M21.6 12.23c0-.71-.06-1.4-.18-2.05H12v3.88h5.4a4.62 4.62 0 0 1-2 3.03v2.5h3.24c1.9-1.75 2.96-4.33 2.96-7.36Z" fill="#4285F4"/><path d="M12 22c2.7 0 4.97-.9 6.63-2.42l-3.24-2.5c-.9.6-2.05.96-3.39.96-2.6 0-4.8-1.76-5.6-4.12H3.05v2.58A10 10 0 0 0 12 22Z" fill="#34A853"/><path d="M6.4 13.92a5.99 5.99 0 0 1 0-3.84V7.5H3.05a10 10 0 0 0 0 9l3.35-2.58Z" fill="#FBBC05"/><path d="M12 5.98c1.47 0 2.79.5 3.83 1.5l2.87-2.87A9.6 9.6 0 0 0 12 2a10 10 0 0 0-8.95 5.5l3.35 2.58c.8-2.36 3-4.1 5.6-4.1Z" fill="#EA4335"/></g>
 
     <!-- logo badge, reused for nav / hero sticker / footer -->
     <g id="logo-badge">
@@ -79,6 +81,7 @@
     <nav class="nav-links">
       <a href="#story">Geschichte</a>
       <a href="#menu">Speisekarte</a>
+      <a href="#bewertungen">Bewertungen</a>
       <a href="#order">Bestellen</a>
       <a href="#visit">Anfahrt</a>
     </nav>
@@ -214,6 +217,60 @@
     </div>
   </section>
 
+  <!-- ============ GOOGLE BEWERTUNGEN ============ -->
+  <section class="reviews" id="bewertungen">
+    <div class="container">
+      <div class="reviews-head" data-reveal>
+        <div class="reviews-score">
+          <span class="reviews-number">4,9</span>
+          <div class="reviews-score-meta">
+            <div class="reviews-stars" aria-hidden="true">
+              <svg><use href="#icon-star"/></svg><svg><use href="#icon-star"/></svg><svg><use href="#icon-star"/></svg><svg><use href="#icon-star"/></svg><svg><use href="#icon-star"/></svg>
+            </div>
+            <span>142 Google-Bewertungen</span>
+          </div>
+        </div>
+        <div class="section-head" style="margin-bottom:0;">
+          <div class="eyebrow">Google Bewertungen</div>
+          <h2>Was unsere Gäste sagen</h2>
+        </div>
+      </div>
+
+      <div class="reviews-grid" data-reveal>
+        <article class="review-card">
+          <div class="reviews-stars" aria-hidden="true">
+            <svg><use href="#icon-star"/></svg><svg><use href="#icon-star"/></svg><svg><use href="#icon-star"/></svg><svg><use href="#icon-star"/></svg><svg><use href="#icon-star"/></svg>
+          </div>
+          <p>„Ein wirklich süßer kleiner Laden mit sehr herzlicher Inhaberin und großartigem Essen!"</p>
+          <span class="review-author">Google-Bewertung</span>
+        </article>
+
+        <article class="review-card">
+          <div class="reviews-stars" aria-hidden="true">
+            <svg><use href="#icon-star"/></svg><svg><use href="#icon-star"/></svg><svg><use href="#icon-star"/></svg><svg><use href="#icon-star"/></svg><svg><use href="#icon-star"/></svg>
+          </div>
+          <p>„Kleines koreanisches Restaurant mit dem besten Kimchi-Fried-Rice in ganz Düsseldorf. Sehr zu empfehlen!"</p>
+          <span class="review-author">Katrina Frey · Local Guide</span>
+        </article>
+
+        <article class="review-card">
+          <div class="reviews-stars" aria-hidden="true">
+            <svg><use href="#icon-star"/></svg><svg><use href="#icon-star"/></svg><svg><use href="#icon-star"/></svg><svg><use href="#icon-star"/></svg><svg><use href="#icon-star"/></svg>
+          </div>
+          <p>„Das Essen war fantastisch — der Bulgogi super lecker, das Personal freundlich und die Präsentation top."</p>
+          <span class="review-author">Tibor Posa · Local Guide</span>
+        </article>
+      </div>
+
+      <div class="reviews-foot" data-reveal>
+        <a href="https://www.google.com/maps/search/?api=1&query=Seoul+Kitchen+im+Hafen+Neckarstra%C3%9Fe+4+D%C3%BCsseldorf" target="_blank" rel="noopener" class="btn btn-outline">
+          <svg style="width:18px;height:18px;"><use href="#icon-google"/></svg>
+          Alle Bewertungen auf Google ansehen
+        </a>
+      </div>
+    </div>
+  </section>
+
   <!-- ============ ORDER ============ -->
   <section class="order" id="order">
     <div class="container">
@@ -331,6 +388,7 @@
         <ul>
           <li><a href="#story">Geschichte</a></li>
           <li><a href="#menu">Speisekarte</a></li>
+          <li><a href="#bewertungen">Bewertungen</a></li>
           <li><a href="#order">Bestellen</a></li>
           <li><a href="#visit">Anfahrt</a></li>
         </ul>
