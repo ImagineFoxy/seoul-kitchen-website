@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Seoul Kitchen im Hafen — Korean Kitchen in Düsseldorf Medienhafen</title>
+<meta name="description" content="Seoul Kitchen im Hafen — home-style Korean plates, wok-fired noodles and crispy favorites, steps from the water in Düsseldorf's Medienhafen. Order delivery or stop by Neckarstraße 4.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;900&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'%3E%3Ccircle cx='200' cy='200' r='190' fill='%23a81f2d'/%3E%3Cpath d='M-58 4A58 42 0 0 0 58 4Z' fill='%23e9c67b' fill-opacity='.5' transform='translate(200 220)'/%3E%3Cpath d='M-63 4H63M-58 4A58 42 0 0 0 58 4' transform='translate(200 220)' stroke='%23e9c67b' stroke-width='9' fill='none'/%3E%3C/svg%3E">
+</head>
+<body>
+
+<div class="grain-overlay"></div>
+
+<!-- ============ SVG DEFS (icons reused across the page) ============ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <!-- logo badge -->
+    <g id="icon-bag"><path d="M6 8h12l-1 12H7L6 8Z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/><path d="M9 8V6a3 3 0 0 1 6 0v2" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/></g>
+    <g id="icon-calendar"><rect x="4" y="5" width="16" height="15" rx="2" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M4 10h16M8 3v4M16 3v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></g>
+    <g id="icon-umbrella"><path d="M4 11a8 8 0 0 1 16 0H4Z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/><path d="M12 11v8a2 2 0 0 1-2 2" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/></g>
+    <g id="icon-paw"><circle cx="7" cy="9" r="1.7" fill="currentColor"/><circle cx="12" cy="6.5" r="1.7" fill="currentColor"/><circle cx="17" cy="9" r="1.7" fill="currentColor"/><path d="M12 12.5c3 0 5.5 2 5.5 4.3 0 1.7-1.5 2.7-3.2 2.1a5 5 0 0 0-4.6 0c-1.7.6-3.2-.4-3.2-2.1 0-2.3 2.5-4.3 5.5-4.3Z" fill="currentColor"/></g>
+    <g id="icon-clock"><circle cx="12" cy="12" r="8.5" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M12 7.5V12l3 2" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/></g>
+    <g id="icon-pin"><path d="M12 21s7-7.2 7-12a7 7 0 1 0-14 0c0 4.8 7 12 7 12Z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/><circle cx="12" cy="9" r="2.4" stroke="currentColor" stroke-width="1.8" fill="none"/></g>
+    <g id="icon-phone"><path d="M6 3.5h3.2l1.3 4-2 1.6a13 13 0 0 0 5.4 5.4l1.6-2 4 1.3V17c0 1.4-1.1 2.5-2.5 2.4C10.5 19 4.9 13.4 4.6 7 4.5 5.6 4.6 4.5 6 3.5Z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/></g>
+    <g id="icon-mail"><rect x="3.5" y="5.5" width="17" height="13" rx="2" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="m4.5 7 7.5 6 7.5-6" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
+    <g id="icon-card"><rect x="3" y="6" width="18" height="12" rx="2" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M3 10h18" stroke="currentColor" stroke-width="1.8"/></g>
+    <g id="icon-info"><circle cx="12" cy="12" r="8.5" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M12 11v5.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="8" r="1" fill="currentColor"/></g>
+    <g id="icon-bike"><circle cx="6" cy="17" r="3.2" stroke="currentColor" stroke-width="1.7" fill="none"/><circle cx="18" cy="17" r="3.2" stroke="currentColor" stroke-width="1.7" fill="none"/><path d="M6 17l4-7h4l3 7M10 10l2.5-3H15M9 17h9" stroke="currentColor" stroke-width="1.7" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
+    <g id="icon-globe"><circle cx="12" cy="12" r="8.5" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M3.5 12h17M12 3.5c2.6 2.4 4 5.3 4 8.5s-1.4 6.1-4 8.5c-2.6-2.4-4-5.3-4-8.5s1.4-6.1 4-8.5Z" stroke="currentColor" stroke-width="1.6" fill="none"/></g>
+    <g id="icon-check"><circle cx="12" cy="12" r="9" fill="currentColor"/><path d="m7.5 12.5 2.8 2.8L16.7 9" stroke="var(--ink)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
+    <g id="icon-insta"><rect x="3.5" y="3.5" width="17" height="17" rx="5" stroke="currentColor" stroke-width="1.7" fill="none"/><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.7" fill="none"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor"/></g>
+
+    <!-- logo badge, reused for nav / hero sticker / footer -->
+    <g id="logo-badge">
+      <path id="arcTop" d="M 70,220 A 130,130 0 0 1 330,220" fill="none"/>
+      <path id="arcBottom" d="M 80,255 A 130,130 0 0 0 320,255" fill="none"/>
+      <circle cx="200" cy="200" r="188" fill="var(--crimson, #a81f2d)"/>
+      <circle cx="200" cy="200" r="188" fill="none" stroke="var(--gold,#d9a54a)" stroke-width="5"/>
+      <circle cx="200" cy="200" r="170" fill="none" stroke="var(--gold,#d9a54a)" stroke-width="1.5" opacity="0.55"/>
+      <text font-family="'Unbounded', sans-serif" font-weight="700" font-size="30" letter-spacing="3" fill="#f7ece0">
+        <textPath href="#arcTop" startOffset="50%" text-anchor="middle">SEOUL KITCHEN</textPath>
+      </text>
+      <g stroke="var(--gold,#d9a54a)" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.7">
+        <path d="M 170,132 C 162,120 178,112 170,100" />
+        <path d="M 198,127 C 190,115 206,107 198,95" />
+      </g>
+      <g transform="translate(200,215)" stroke="var(--gold,#d9a54a)" stroke-width="6.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M -58,4 A 58,42 0 0 0 58,4 Z" fill="var(--gold,#d9a54a)" fill-opacity="0.14"/>
+        <path d="M -63,4 L 63,4" />
+        <path d="M -58,4 A 58,42 0 0 0 58,4" />
+        <path d="M -5,-6 L 32,-58" />
+        <path d="M 9,2 L 46,-50" />
+      </g>
+      <text font-family="'Fraunces', serif" font-weight="600" font-size="22" letter-spacing="6" fill="#f7ece0">
+        <textPath href="#arcBottom" startOffset="50%" text-anchor="middle">IM HAFEN</textPath>
+      </text>
+    </g>
+
+    <!-- organic blob shapes -->
+    <path id="blob-3" d="M 186.0,115.0 C 186.6,133.6 184.5,152.5 172.7,172.7 C 160.9,192.9 137.1,233.2 115.0,236.1 C 92.9,238.9 52.2,210.0 40.2,189.8 C 28.3,169.6 42.2,138.7 43.4,115.0 C 44.6,91.3 35.7,64.0 47.6,47.6 C 59.5,31.2 94.8,14.2 115.0,16.5 C 135.2,18.7 157.0,44.7 168.9,61.1 C 180.7,77.6 185.4,96.4 186.0,115.0 Z"/>
+    <path id="blob-27" d="M 228.8,115.0 C 229.8,134.6 195.5,164.2 176.5,176.5 C 157.5,188.7 135.6,188.4 115.0,188.5 C 94.4,188.6 74.7,189.2 53.0,177.0 C 31.3,164.7 -11.3,139.5 -15.2,115.0 C -19.0,90.5 8.3,40.9 30.0,30.0 C 51.6,19.0 91.5,44.4 115.0,49.3 C 138.5,54.2 151.8,48.2 170.8,59.2 C 189.8,70.1 227.9,95.4 228.8,115.0 Z"/>
+    <path id="blob-7" d="M 223.8,115.0 C 224.4,144.5 223.5,185.5 205.4,205.4 C 187.2,225.3 139.6,239.8 115.0,234.3 C 90.4,228.8 72.2,192.0 57.9,172.1 C 43.6,152.2 34.3,139.4 29.0,115.0 C 23.6,90.6 11.5,36.7 25.8,25.8 C 40.1,14.9 85.7,49.2 115.0,49.6 C 144.3,50.1 183.5,17.5 201.6,28.4 C 219.7,39.3 223.1,85.5 223.8,115.0 Z"/>
+  </defs>
+</svg>
+
+<!-- ============ NAV ============ -->
+<header class="nav">
+  <div class="container">
+    <a href="#top" class="brand">
+      <svg viewBox="0 0 400 400" style="--crimson:#a81f2d; --gold:#e9c67b;"><use href="#logo-badge"/></svg>
+      <span>Seoul Kitchen<span class="brand-sub">im Hafen · Düsseldorf</span></span>
+    </a>
+    <nav class="nav-links">
+      <a href="#story">Story</a>
+      <a href="#menu">Menu</a>
+      <a href="#order">Order</a>
+      <a href="#visit">Visit</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="#order" class="btn btn-primary btn-sm">Order Now</a>
+      <button class="nav-toggle" aria-label="Toggle menu"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <svg class="blob blob-a" viewBox="0 0 230 230"><use href="#blob-3" fill="#e9c67b"/></svg>
+    <svg class="blob blob-b" viewBox="0 0 230 230"><use href="#blob-27" fill="#a81f2d"/></svg>
+
+    <div class="container hero-grid">
+      <div class="hero-copy" data-reveal>
+        <div class="hero-kr"><span class="kr">서울 키친</span><span class="dot"></span>Korean Kitchen · Medienhafen, Düsseldorf</div>
+        <h1>
+          <span class="line1">SEOUL</span>
+          <span class="line2">ON&nbsp;THE&nbsp;HAFEN</span>
+        </h1>
+        <p class="hero-tagline">Home-style Korean plates, wok-fired and fresh — crispy, saucy, and made to order steps from the water in Düsseldorf's Medienhafen.</p>
+        <div class="hero-ctas">
+          <a href="#order" class="btn btn-primary">Order Now</a>
+          <a href="#menu" class="btn btn-outline">See What's Cooking</a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="shadow-pool"></div>
+        <img src="assets/hero-cutout.webp" alt="Crispy chicken cutlet plate with stir-fried vegetables and a bowl of steamed rice, Seoul Kitchen im Hafen">
+        <div class="hero-sticker">
+          <svg viewBox="0 0 230 230" width="128" height="128"><use href="#blob-7" fill="#a81f2d"/></svg>
+          <div class="hero-sticker-inner">
+            <span style="font-family:var(--font-display); font-weight:700; color:#f6ead9; font-size:12px; text-align:center; line-height:1.3; letter-spacing:0.02em;">HOUSE<br>FAVORITE</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FEATURE STRIP ============ -->
+  <section class="feature-strip" data-reveal>
+    <div class="container">
+      <ul>
+        <li><svg><use href="#icon-bag"/></svg>Takeaway &amp; Delivery</li>
+        <li><svg><use href="#icon-calendar"/></svg>Catering Available</li>
+        <li><svg><use href="#icon-umbrella"/></svg>Outdoor Seating</li>
+        <li><svg><use href="#icon-paw"/></svg>Dog-Friendly</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT / STORY ============ -->
+  <section class="about" id="story">
+    <svg class="blob blob-c" viewBox="0 0 230 230"><use href="#blob-3" fill="#a81f2d"/></svg>
+    <div class="container about-grid">
+      <div class="about-copy" data-reveal>
+        <div class="eyebrow">Our Story</div>
+        <h2 class="section-head" style="margin-bottom:0;">A little piece of Seoul, right on the water</h2>
+        <div style="margin-top:26px;">
+          <p>Tucked into Düsseldorf's Medienhafen — a waterfront district better known for striking architecture than kimchi — Seoul Kitchen im Hafen serves honest, home-style Korean cooking: crispy fried favorites, wok-fired noodles, and rice bowls built for comfort, not ceremony.</p>
+          <p>Everything is made fresh to order, so it's the kind of place you visit for a proper lunch break by the harbor, a fast takeaway on the way home, or a catering order that shows up hot and ready.</p>
+        </div>
+        <div class="about-quote">"Fried, saucy, and fast — the kind of food that makes the Medienhafen lunch rush worth fighting for."</div>
+        <div class="about-notice">
+          <svg><use href="#icon-info"/></svg>
+          <span><strong>Heads up:</strong> between 12:00–14:00 the kitchen gets busy with the lunch crowd — a short wait just means it's fresh off the wok.</span>
+        </div>
+      </div>
+
+      <div class="stat-cards" data-reveal>
+        <div class="stat-card">
+          <div class="icon-wrap"><svg><use href="#icon-bag"/></svg></div>
+          <div><h4>Made Fresh, Made Fast</h4><p>Every plate wok-fired or fried to order — nothing sitting under a heat lamp.</p></div>
+        </div>
+        <div class="stat-card">
+          <div class="icon-wrap"><svg><use href="#icon-pin"/></svg></div>
+          <div><h4>Right on the Medienhafen</h4><p>Neckarstraße 4 — an easy stop between meetings, walks, or the water.</p></div>
+        </div>
+        <div class="stat-card">
+          <div class="icon-wrap"><svg><use href="#icon-paw"/></svg></div>
+          <div><h4>Easy &amp; Welcoming</h4><p>Outdoor seating, dogs welcome, cash or EC card — come as you are.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MENU HIGHLIGHTS ============ -->
+  <section class="menu" id="menu">
+    <svg class="blob blob-d" viewBox="0 0 230 230"><use href="#blob-3" fill="#e9c67b"/></svg>
+    <svg class="blob blob-e" viewBox="0 0 230 230"><use href="#blob-27" fill="#e9c67b"/></svg>
+    <div class="container">
+      <div class="section-head centered" data-reveal>
+        <div class="eyebrow" style="justify-content:center;">Signature Plates</div>
+        <h2>A taste of what's cooking</h2>
+        <p style="margin-left:auto; margin-right:auto;">A few house favorites to get you excited — the full menu and pricing are landing soon, but delivery is open right now.</p>
+      </div>
+
+      <div class="menu-grid" data-reveal>
+        <article class="menu-card">
+          <span class="tag">Crowd Favorite</span>
+          <div class="plate-wrap"><img src="assets/chicken-sauce-cutout.webp" alt="Crispy chicken cutlet rice bowl with stir-fried vegetables and a creamy drizzle"></div>
+          <h3>Crispy Cutlet Rice Bowl</h3>
+          <p>A golden, crispy-fried cutlet sliced over steamed rice with a savory vegetable stir-fry and a creamy soy drizzle.</p>
+          <span class="price-note">Full menu coming soon</span>
+        </article>
+
+        <article class="menu-card">
+          <span class="tag">Chef's Pick</span>
+          <div class="plate-wrap"><img src="assets/chicken-cutout.webp" alt="Sweet and spicy glazed Korean fried chicken bites with sesame seeds and scallion"></div>
+          <h3>Yangnyeom Fried Chicken</h3>
+          <p>Double-fried chicken bites tossed in a sticky sweet-and-spicy glaze, finished with sesame and fresh scallion.</p>
+          <span class="price-note">Full menu coming soon</span>
+        </article>
+
+        <article class="menu-card">
+          <span class="tag">Comfort Bowl</span>
+          <div class="plate-wrap"><img src="assets/noodles-cutout.webp" alt="Wok-fried noodles with vegetables, chicken, and sesame"></div>
+          <h3>Wok-Fired Noodles</h3>
+          <p>Chewy noodles tossed hot in the wok with crisp vegetables, tender chicken, and a savory sesame finish.</p>
+          <span class="price-note">Full menu coming soon</span>
+        </article>
+      </div>
+
+      <div class="menu-foot" data-reveal>
+        <p>Craving it already? Order through Wolt, Uber Eats, or Lieferando — or swing by for takeaway.</p>
+        <a href="#order" class="btn btn-gold">Order Delivery</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ORDER ============ -->
+  <section class="order" id="order">
+    <div class="container">
+      <div class="section-head centered" data-reveal>
+        <div class="eyebrow" style="justify-content:center;">Get It Delivered</div>
+        <h2>Order Seoul Kitchen, your way</h2>
+        <p style="margin-left:auto; margin-right:auto;">Dine in, pick up, or have it delivered straight to you — pick your platform below.</p>
+      </div>
+
+      <div class="order-grid" data-reveal>
+        <a class="order-card" href="https://wolt.com/en/deu/dusseldorf/restaurant/seoul-kitchen-neckarstrasse?srsltid=AfmBOooCRmc80H0mNJdryHwr1PW15DmDsGkSPhAyktWx3p9UtdB1E4yQ" target="_blank" rel="noopener">
+          <div class="icon-wrap"><svg><use href="#icon-bike"/></svg></div>
+          <h4>Wolt</h4>
+          <span>Delivery</span>
+        </a>
+        <a class="order-card" href="https://www.ubereats.com/de-en/store/seoul-kitchen-im-medienhafen/Em-YU3mrXCmFtOS9ZdHRyA?srsltid=AfmBOooQ-R_CGeqImIwzBNKBwVt7LoH9Y2u2TPbvu3luBzCDB6OTpp7V" target="_blank" rel="noopener">
+          <div class="icon-wrap"><svg><use href="#icon-bike"/></svg></div>
+          <h4>Uber Eats</h4>
+          <span>Delivery</span>
+        </a>
+        <a class="order-card" href="https://www.seoulkitchenimhafendusseldorf.de/" target="_blank" rel="noopener">
+          <div class="icon-wrap"><svg><use href="#icon-bag"/></svg></div>
+          <h4>Lieferando</h4>
+          <span>Delivery</span>
+        </a>
+        <a class="order-card" href="https://seoul-kitchen-im-hafen-dusseldorf.order.app.hd.digital/menus" target="_blank" rel="noopener">
+          <div class="icon-wrap"><svg><use href="#icon-globe"/></svg></div>
+          <h4>Order Direct</h4>
+          <span>Pickup &amp; Delivery</span>
+        </a>
+      </div>
+
+      <p class="order-note"><svg><use href="#icon-check"/></svg>Dine-in &amp; takeaway also available at Neckarstraße 4 — just walk in.</p>
+    </div>
+  </section>
+
+  <!-- ============ VISIT ============ -->
+  <section class="visit" id="visit">
+    <svg class="blob blob-f" viewBox="0 0 230 230"><use href="#blob-3" fill="#a81f2d"/></svg>
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <div class="eyebrow">Find Us</div>
+        <h2>Come say hi on the Hafen</h2>
+      </div>
+
+      <div class="visit-grid">
+        <div class="visit-card" data-reveal>
+          <div class="visit-row">
+            <svg><use href="#icon-pin"/></svg>
+            <div><h4>Address</h4><p>Neckarstraße 4<br>40219 Düsseldorf, Germany</p></div>
+          </div>
+          <div class="visit-row">
+            <svg><use href="#icon-clock"/></svg>
+            <div style="flex:1;">
+              <h4>Hours</h4>
+              <table class="hours-table">
+                <tr><td>Monday – Friday</td><td>11:00 – 18:00</td></tr>
+                <tr><td>Saturday</td><td>Closed</td></tr>
+                <tr><td>Sunday</td><td>Closed</td></tr>
+              </table>
+            </div>
+          </div>
+          <div class="visit-row">
+            <svg><use href="#icon-phone"/></svg>
+            <div><h4>Phone</h4><a href="tel:+4915777715075">+49 1577 7715075</a></div>
+          </div>
+          <div class="visit-row">
+            <svg><use href="#icon-mail"/></svg>
+            <div><h4>Email</h4><a href="mailto:seoulkitchenimhafen@gmail.com">seoulkitchenimhafen@gmail.com</a></div>
+          </div>
+          <div class="visit-row">
+            <svg><use href="#icon-card"/></svg>
+            <div><h4>Payment</h4><p>Cash &amp; EC card accepted</p></div>
+          </div>
+
+          <div class="badge-row">
+            <span class="mini-badge"><svg><use href="#icon-umbrella"/></svg>Outdoor Seating</span>
+            <span class="mini-badge"><svg><use href="#icon-paw"/></svg>Pets Welcome</span>
+            <span class="mini-badge"><svg><use href="#icon-bag"/></svg>Takeaway</span>
+            <span class="mini-badge"><svg><use href="#icon-calendar"/></svg>Catering</span>
+          </div>
+        </div>
+
+        <div class="map-wrap" data-reveal>
+          <iframe
+            src="https://www.google.com/maps?q=Neckarstra%C3%9Fe+4,+40219+D%C3%BCsseldorf,+Germany&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Seoul Kitchen im Hafen location map">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#top" class="brand">
+          <svg viewBox="0 0 400 400" style="--crimson:#a81f2d; --gold:#e9c67b;"><use href="#logo-badge"/></svg>
+          <span>Seoul Kitchen<span class="brand-sub" style="color:#e9c67b;">im Hafen · Düsseldorf</span></span>
+        </a>
+        <p>Home-style Korean plates on Düsseldorf's Medienhafen — fresh, fast, and worth the walk down to the water.</p>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/seoulkitchenimhafen" target="_blank" rel="noopener" aria-label="Instagram"><svg><use href="#icon-insta"/></svg></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h5>Explore</h5>
+        <ul>
+          <li><a href="#story">Story</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#order">Order</a></li>
+          <li><a href="#visit">Visit</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Order</h5>
+        <ul>
+          <li><a href="https://wolt.com/en/deu/dusseldorf/restaurant/seoul-kitchen-neckarstrasse?srsltid=AfmBOooCRmc80H0mNJdryHwr1PW15DmDsGkSPhAyktWx3p9UtdB1E4yQ" target="_blank" rel="noopener">Wolt</a></li>
+          <li><a href="https://www.ubereats.com/de-en/store/seoul-kitchen-im-medienhafen/Em-YU3mrXCmFtOS9ZdHRyA?srsltid=AfmBOooQ-R_CGeqImIwzBNKBwVt7LoH9Y2u2TPbvu3luBzCDB6OTpp7V" target="_blank" rel="noopener">Uber Eats</a></li>
+          <li><a href="https://www.seoulkitchenimhafendusseldorf.de/" target="_blank" rel="noopener">Lieferando</a></li>
+          <li><a href="https://seoul-kitchen-im-hafen-dusseldorf.order.app.hd.digital/menus" target="_blank" rel="noopener">Order Direct</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <ul>
+          <li><span>Neckarstraße 4, 40219 Düsseldorf</span></li>
+          <li><a href="tel:+4915777715075">+49 1577 7715075</a></li>
+          <li><a href="mailto:seoulkitchenimhafen@gmail.com">seoulkitchenimhafen@gmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Seoul Kitchen im Hafen. All rights reserved.</span>
+      <span>Neckarstraße 4, 40219 Düsseldorf</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
