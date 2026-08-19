@@ -36,6 +36,8 @@
     <g id="icon-check"><circle cx="12" cy="12" r="9" fill="currentColor"/><path d="m7.5 12.5 2.8 2.8L16.7 9" stroke="var(--ink)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
     <g id="icon-insta"><rect x="3.5" y="3.5" width="17" height="17" rx="5" stroke="currentColor" stroke-width="1.7" fill="none"/><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.7" fill="none"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor"/></g>
     <g id="icon-star"><path d="M12 2.5l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.3l-5.8 3.1 1.1-6.5-4.7-4.6 6.5-.9L12 2.5Z" fill="currentColor"/></g>
+    <g id="icon-bowl2"><path d="M4 11a8 5.2 0 0 0 16 0Z" fill="currentColor" fill-opacity="0.15"/><path d="M3 11h18M4 11a8 5.2 0 0 0 16 0" stroke="currentColor" stroke-width="1.7" fill="none" stroke-linecap="round"/><path d="M9 11c0-2.5 1-4.5 1-6M15 11c0-2.5-1-4.5-1-6" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.6"/></g>
+    <g id="icon-arrow"><path d="M5 12h13.5M13 6.5 18.5 12 13 17.5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
     <g id="icon-google"><path d="M21.6 12.23c0-.71-.06-1.4-.18-2.05H12v3.88h5.4a4.62 4.62 0 0 1-2 3.03v2.5h3.24c1.9-1.75 2.96-4.33 2.96-7.36Z" fill="#4285F4"/><path d="M12 22c2.7 0 4.97-.9 6.63-2.42l-3.24-2.5c-.9.6-2.05.96-3.39.96-2.6 0-4.8-1.76-5.6-4.12H3.05v2.58A10 10 0 0 0 12 22Z" fill="#34A853"/><path d="M6.4 13.92a5.99 5.99 0 0 1 0-3.84V7.5H3.05a10 10 0 0 0 0 9l3.35-2.58Z" fill="#FBBC05"/><path d="M12 5.98c1.47 0 2.79.5 3.83 1.5l2.87-2.87A9.6 9.6 0 0 0 12 2a10 10 0 0 0-8.95 5.5l3.35 2.58c.8-2.36 3-4.1 5.6-4.1Z" fill="#EA4335"/></g>
 
     <!-- logo badge, reused for nav / hero sticker / footer -->
@@ -96,31 +98,33 @@
 
   <!-- ============ HERO ============ -->
   <section class="hero">
-    <svg class="blob blob-a" viewBox="0 0 230 230"><use href="#blob-3" fill="#e9c67b"/></svg>
-    <svg class="blob blob-b" viewBox="0 0 230 230"><use href="#blob-27" fill="#a81f2d"/></svg>
-
     <div class="container hero-grid">
       <div class="hero-copy" data-reveal>
-        <div class="hero-kr"><span class="kr">서울 키친</span><span class="dot"></span>Koreanische Küche · Medienhafen, Düsseldorf</div>
-        <h1>
-          <span class="line1">SEOUL</span>
-          <span class="line2">AM&nbsp;HAFEN</span>
-        </h1>
-        <p class="hero-tagline">Hausgemachte koreanische Gerichte, frisch aus dem Wok — knusprig, saftig und auf Bestellung zubereitet, nur einen Steinwurf vom Wasser entfernt im Düsseldorfer Medienhafen.</p>
+        <span class="hero-pill"><svg><use href="#icon-clock"/></svg>Mo–Fr geöffnet · 11:00–18:00</span>
+        <h1 class="hero-heading">Koreanisch gekocht<br>für hungrige Mittage<br>und ruhige Nachmittage</h1>
+        <p class="hero-desc">Seoul Kitchen im Hafen ist ein Nachbarschaftsrestaurant für koreanische Küche — knusprig Frittiertes, wok-gebratene Nudeln, hausgemachte Saucen und ein Ort für ein entspanntes Mittagessen am Wasser.</p>
         <div class="hero-ctas">
-          <a href="#order" class="btn btn-primary">Jetzt bestellen</a>
-          <a href="#menu" class="btn btn-outline">Was gerade kocht</a>
+          <a href="#menu" class="btn btn-ink">Speisekarte entdecken <svg><use href="#icon-arrow"/></svg></a>
+          <a href="#order" class="btn btn-outline">Jetzt bestellen</a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat"><span class="hero-stat-num">4,9</span><span class="hero-stat-label">Google-Bewertung</span></div>
+          <div class="hero-stat"><span class="hero-stat-num">142</span><span class="hero-stat-label">Bewertungen</span></div>
+          <div class="hero-stat"><span class="hero-stat-num">€10–20</span><span class="hero-stat-label">pro Person</span></div>
         </div>
       </div>
 
-      <div class="hero-visual">
-        <div class="shadow-pool"></div>
-        <img src="assets/hero-cutout.webp" alt="Knuspriges Schnitzel mit gebratenem Gemüse und einer Schale gedämpftem Reis, Seoul Kitchen im Hafen">
-        <div class="hero-sticker">
-          <svg viewBox="0 0 230 230" width="128" height="128"><use href="#blob-7" fill="#a81f2d"/></svg>
-          <div class="hero-sticker-inner">
-            <span style="font-family:var(--font-display); font-weight:700; color:#f6ead9; font-size:12px; text-align:center; line-height:1.3; letter-spacing:0.02em;">HAUS-<br>FAVORIT</span>
-          </div>
+      <div class="hero-visual" data-reveal>
+        <div class="hero-chip hero-chip-top">
+          <div class="hero-chip-icon"><svg><use href="#icon-bowl2"/></svg></div>
+          <div><h5>Yangnyeom-Hähnchen</h5><span>süß · scharf · sesam</span></div>
+        </div>
+        <div class="hero-photo-frame">
+          <img src="assets/hero-photo.webp" alt="Knuspriges Schnitzel mit Gemüse-Stir-Fry, frisch zubereitet bei Seoul Kitchen im Hafen">
+        </div>
+        <div class="hero-chip hero-chip-bottom">
+          <div class="hero-chip-avatar">KF</div>
+          <div><h5>Katrina Frey · Stammgast</h5><p>„Das beste Kimchi-Fried-Rice in ganz Düsseldorf."</p></div>
         </div>
       </div>
     </div>
