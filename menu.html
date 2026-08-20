@@ -1,0 +1,477 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Speisekarte — Seoul Kitchen im Hafen</title>
+<meta name="description" content="Die vollständige Speisekarte von Seoul Kitchen im Hafen: Hauptgerichte, Reisgerichte, Nudelgerichte, Beilagen und Getränke — mit allen Preisen.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;900&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'%3E%3Ccircle cx='200' cy='200' r='190' fill='%23a81f2d'/%3E%3Cpath d='M-58 4A58 42 0 0 0 58 4Z' fill='%23e9c67b' fill-opacity='.5' transform='translate(200 220)'/%3E%3Cpath d='M-63 4H63M-58 4A58 42 0 0 0 58 4' transform='translate(200 220)' stroke='%23e9c67b' stroke-width='9' fill='none'/%3E%3C/svg%3E">
+</head>
+<body>
+
+<div class="grain-overlay"></div>
+
+<!-- ============ SVG DEFS (icons reused across the page) ============ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <g id="icon-bag"><path d="M6 8h12l-1 12H7L6 8Z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/><path d="M9 8V6a3 3 0 0 1 6 0v2" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/></g>
+    <g id="icon-calendar"><rect x="4" y="5" width="16" height="15" rx="2" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M4 10h16M8 3v4M16 3v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></g>
+    <g id="icon-umbrella"><path d="M4 11a8 8 0 0 1 16 0H4Z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/><path d="M12 11v8a2 2 0 0 1-2 2" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/></g>
+    <g id="icon-paw"><circle cx="7" cy="9" r="1.7" fill="currentColor"/><circle cx="12" cy="6.5" r="1.7" fill="currentColor"/><circle cx="17" cy="9" r="1.7" fill="currentColor"/><path d="M12 12.5c3 0 5.5 2 5.5 4.3 0 1.7-1.5 2.7-3.2 2.1a5 5 0 0 0-4.6 0c-1.7.6-3.2-.4-3.2-2.1 0-2.3 2.5-4.3 5.5-4.3Z" fill="currentColor"/></g>
+    <g id="icon-clock"><circle cx="12" cy="12" r="8.5" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M12 7.5V12l3 2" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/></g>
+    <g id="icon-pin"><path d="M12 21s7-7.2 7-12a7 7 0 1 0-14 0c0 4.8 7 12 7 12Z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/><circle cx="12" cy="9" r="2.4" stroke="currentColor" stroke-width="1.8" fill="none"/></g>
+    <g id="icon-phone"><path d="M6 3.5h3.2l1.3 4-2 1.6a13 13 0 0 0 5.4 5.4l1.6-2 4 1.3V17c0 1.4-1.1 2.5-2.5 2.4C10.5 19 4.9 13.4 4.6 7 4.5 5.6 4.6 4.5 6 3.5Z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/></g>
+    <g id="icon-mail"><rect x="3.5" y="5.5" width="17" height="13" rx="2" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="m4.5 7 7.5 6 7.5-6" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
+    <g id="icon-card"><rect x="3" y="6" width="18" height="12" rx="2" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M3 10h18" stroke="currentColor" stroke-width="1.8"/></g>
+    <g id="icon-info"><circle cx="12" cy="12" r="8.5" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M12 11v5.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="8" r="1" fill="currentColor"/></g>
+    <g id="icon-bike"><circle cx="6" cy="17" r="3.2" stroke="currentColor" stroke-width="1.7" fill="none"/><circle cx="18" cy="17" r="3.2" stroke="currentColor" stroke-width="1.7" fill="none"/><path d="M6 17l4-7h4l3 7M10 10l2.5-3H15M9 17h9" stroke="currentColor" stroke-width="1.7" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
+    <g id="icon-globe"><circle cx="12" cy="12" r="8.5" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M3.5 12h17M12 3.5c2.6 2.4 4 5.3 4 8.5s-1.4 6.1-4 8.5c-2.6-2.4-4-5.3-4-8.5s1.4-6.1 4-8.5Z" stroke="currentColor" stroke-width="1.6" fill="none"/></g>
+    <g id="icon-check"><circle cx="12" cy="12" r="9" fill="currentColor"/><path d="m7.5 12.5 2.8 2.8L16.7 9" stroke="var(--ink)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
+    <g id="icon-insta"><rect x="3.5" y="3.5" width="17" height="17" rx="5" stroke="currentColor" stroke-width="1.7" fill="none"/><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.7" fill="none"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor"/></g>
+    <g id="icon-star"><path d="M12 2.5l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.3l-5.8 3.1 1.1-6.5-4.7-4.6 6.5-.9L12 2.5Z" fill="currentColor"/></g>
+    <g id="icon-bowl2"><path d="M4 11a8 5.2 0 0 0 16 0Z" fill="currentColor" fill-opacity="0.15"/><path d="M3 11h18M4 11a8 5.2 0 0 0 16 0" stroke="currentColor" stroke-width="1.7" fill="none" stroke-linecap="round"/><path d="M9 11c0-2.5 1-4.5 1-6M15 11c0-2.5-1-4.5-1-6" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.6"/></g>
+    <g id="icon-arrow"><path d="M5 12h13.5M13 6.5 18.5 12 13 17.5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
+    <g id="icon-google"><path d="M21.6 12.23c0-.71-.06-1.4-.18-2.05H12v3.88h5.4a4.62 4.62 0 0 1-2 3.03v2.5h3.24c1.9-1.75 2.96-4.33 2.96-7.36Z" fill="#4285F4"/><path d="M12 22c2.7 0 4.97-.9 6.63-2.42l-3.24-2.5c-.9.6-2.05.96-3.39.96-2.6 0-4.8-1.76-5.6-4.12H3.05v2.58A10 10 0 0 0 12 22Z" fill="#34A853"/><path d="M6.4 13.92a5.99 5.99 0 0 1 0-3.84V7.5H3.05a10 10 0 0 0 0 9l3.35-2.58Z" fill="#FBBC05"/><path d="M12 5.98c1.47 0 2.79.5 3.83 1.5l2.87-2.87A9.6 9.6 0 0 0 12 2a10 10 0 0 0-8.95 5.5l3.35 2.58c.8-2.36 3-4.1 5.6-4.1Z" fill="#EA4335"/></g>
+
+    <g id="logo-badge">
+      <path id="arcTop" d="M 70,220 A 130,130 0 0 1 330,220" fill="none"/>
+      <path id="arcBottom" d="M 80,255 A 130,130 0 0 0 320,255" fill="none"/>
+      <circle cx="200" cy="200" r="188" fill="var(--crimson, #a81f2d)"/>
+      <circle cx="200" cy="200" r="188" fill="none" stroke="var(--gold,#d9a54a)" stroke-width="5"/>
+      <circle cx="200" cy="200" r="170" fill="none" stroke="var(--gold,#d9a54a)" stroke-width="1.5" opacity="0.55"/>
+      <text font-family="'Unbounded', sans-serif" font-weight="700" font-size="30" letter-spacing="3" fill="#f7ece0">
+        <textPath href="#arcTop" startOffset="50%" text-anchor="middle">SEOUL KITCHEN</textPath>
+      </text>
+      <g stroke="var(--gold,#d9a54a)" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.7">
+        <path d="M 170,132 C 162,120 178,112 170,100" />
+        <path d="M 198,127 C 190,115 206,107 198,95" />
+      </g>
+      <g transform="translate(200,215)" stroke="var(--gold,#d9a54a)" stroke-width="6.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M -58,4 A 58,42 0 0 0 58,4 Z" fill="var(--gold,#d9a54a)" fill-opacity="0.14"/>
+        <path d="M -63,4 L 63,4" />
+        <path d="M -58,4 A 58,42 0 0 0 58,4" />
+        <path d="M -5,-6 L 32,-58" />
+        <path d="M 9,2 L 46,-50" />
+      </g>
+      <text font-family="'Fraunces', serif" font-weight="600" font-size="22" letter-spacing="6" fill="#f7ece0">
+        <textPath href="#arcBottom" startOffset="50%" text-anchor="middle">IM HAFEN</textPath>
+      </text>
+    </g>
+  </defs>
+</svg>
+
+<!-- ============ NAV ============ -->
+<header class="nav">
+  <div class="container">
+    <a href="index.html" class="brand">
+      <svg viewBox="0 0 400 400" style="--crimson:#a81f2d; --gold:#e9c67b;"><use href="#logo-badge"/></svg>
+      <span>Seoul Kitchen<span class="brand-sub">im Hafen · Düsseldorf</span></span>
+    </a>
+    <nav class="nav-links">
+      <a href="menu.html">Speisekarte</a>
+      <a href="index.html#bewertungen">Bewertungen</a>
+      <a href="index.html#order">Bestellen</a>
+      <a href="index.html#visit">Anfahrt</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="index.html#order" class="btn btn-primary btn-sm">Jetzt bestellen</a>
+      <button class="nav-toggle" aria-label="Menü öffnen"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ============ PAGE HERO ============ -->
+  <section class="menu-page-hero">
+    <div class="container">
+      <div class="eyebrow">Unsere Speisekarte</div>
+      <h1>Alles, was wir kochen</h1>
+      <p>Die komplette Speisekarte von Seoul Kitchen im Hafen — vom klassischen Bibimbap bis zur frittierten Gimbap. Die Nummern helfen beim Bestellen am Telefon oder vor Ort.</p>
+    </div>
+  </section>
+
+  <!-- ============ CATEGORY NAV ============ -->
+  <nav class="category-nav">
+    <div class="container">
+      <ul>
+        <li><a href="#hauptgerichte">🥘 Hauptgerichte</a></li>
+        <li><a href="#reisgerichte">🍛 Reisgerichte</a></li>
+        <li><a href="#nudelgerichte">🍜 Nudelgerichte</a></li>
+        <li><a href="#beilagen">🍚 Beilagen</a></li>
+        <li><a href="#getraenke">🥤 Getränke</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ============ HAUPTGERICHTE ============ -->
+  <section class="dish-section" id="hauptgerichte">
+    <div class="container">
+      <div class="dish-section-head"><h2>Hauptgerichte 🥘</h2><span>15 Gerichte</span></div>
+      <div class="dish-grid">
+
+        <article class="dish-card">
+          <img class="dish-photo" src="assets/menu/bibimbap.webp" alt="Bibimbap">
+          <div class="dish-info">
+            <span class="dish-badge">Beliebt</span>
+            <div class="dish-name-row"><span class="dish-name">Bibimbap<span class="dish-num">#1</span></span></div>
+            <p class="dish-desc">Mit Rindfleisch, verschiedenem Gemüse und Spiegelei.</p>
+            <div class="dish-price">€14,50</div>
+          </div>
+        </article>
+
+        <article class="dish-card">
+          <div class="dish-photo-placeholder"><svg viewBox="0 0 24 24"><use href="#icon-bowl2"/></svg></div>
+          <div class="dish-info">
+            <div class="dish-name-row"><span class="dish-name">Bibimbap (vegetarisch)<span class="dish-num">#1.1</span></span></div>
+            <p class="dish-desc">Mit verschiedenem Gemüse und Reis.</p>
+            <div class="dish-price">€13,50</div>
+          </div>
+        </article>
+
+        <article class="dish-card">
+          <img class="dish-photo" src="assets/menu/so-bulgogi-deobbap.webp" alt="So Bulgogi Deobbap">
+          <div class="dish-info">
+            <div class="dish-name-row"><span class="dish-name">So Bulgogi Deobbap<span class="dish-num">#2</span></span></div>
+            <p class="dish-desc">Mit Rindfleisch, Gemüse, Spiegelei und Reis.</p>
+            <div class="dish-price">€15,50</div>
+          </div>
+        </article>
+
+        <article class="dish-card">
+          <img class="dish-photo" src="assets/menu/dweiji-bulgogi-deopbap.webp" alt="Dweiji Bulgogi Deopbap">
+          <div class="dish-info">
+            <div class="dish-name-row"><span class="dish-name">Dweiji Bulgogi Deopbap<span class="dish-num">#3</span></span></div>
+            <p class="dish-desc">Scharf, mit Schweinefleisch, Gemüse und Reis.</p>
+            <div class="dish-price">€15,50</div>
+          </div>
+        </article>
+
+        <article class="dish-card">
+          <img class="dish-photo" src="assets/menu/tsaptse-deobbap.webp" alt="Tsaptse Deobbap">
+          <div class="dish-info">
+            <span class="dish-badge">Beliebt</span>
+            <div class="dish-name-row"><span class="dish-name">Tsaptse Deobbap<span class="dish-num">#4</span></span></div>
+            <p class="dish-desc">Mit Rinderfleisch, gebratenen Glasnudeln, Gemüse, Spiegelei und Reis.</p>
+            <div class="dish-price">€14,50</div>
+          </div>
+        </article>
+
+        <article class="dish-card">
+          <img class="dish-photo" src="assets/menu/ozinnga-deobbap.webp" alt="Ozinnga Deobbap">
+          <div class="dish-info">
+            <div class="dish-name-row"><span class="dish-name">Ozinnga Deobbap<span class="dish-num">#5</span></span></div>
+            <p class="dish-desc">Scharf, mit Tintenfisch, Gemüse, Reis und scharfer Soße.</p>
+            <div class="dish-price">€15,50</div>
+          </div>
+        </article>
+
+        <article class="dish-card">
+          <div class="dish-photo-placeholder"><svg viewBox="0 0 24 24"><use href="#icon-bowl2"/></svg></div>
+          <div class="dish-info">
+            <div class="dish-name-row"><span class="dish-name">Samgebsal Bokkum<span class="dish-num">#12</span></span></div>
+            <p class="dish-desc">Sehr scharf gebratenes Schweinefleisch mit Kimchi, Zwiebel und Tofu.</p>
+            <div class="dish-price">€15,50</div>
+          </div>
+        </article>
+
+        <article class="dish-card">
+          <img class="dish-photo" src="assets/menu/sundubu-zigae.webp" alt="Sundubu Zigae">
+          <div class="dish-info">
+            <div class="dish-name-row"><span class="dish-name">Sundubu Zigae<span class="dish-num">#13</span></span></div>
+            <p class="dish-desc">Scharfer Gemüseeintopf mit Schweinefleisch und Tofu, dazu Reis.</p>
+            <div class="dish-price">€14,50</div>
+          </div>
+        </article>
+
+        <article class="dish-card">
+          <div class="dish-photo-placeholder"><svg viewBox="0 0 24 24"><use href="#icon-bowl2"/></svg></div>
+          <div class="dish-info">
+            <div class="dish-name-row"><span class="dish-name">Kimchi Zigae<span class="dish-num">#14</span></span></div>
+            <p class="dish-desc">Sehr scharfer Eintopf mit Kimchi, Schweinefleisch, Gemüse und Tofu, dazu Reis.</p>
+            <div class="dish-price">€15,50</div>
+          </div>
+        </article>
+
+        <article class="dish-card">
+          <img class="dish-photo" src="assets/menu/bokum-dubu.webp" alt="Bokum Dubu">
+          <div class="dish-info">
+            <div class="dish-name-row"><span class="dish-name">Bokum Dubu<span class="dish-num">#15</span></span></div>
+            <p class="dish-desc">Gebratener Tofu mit Scharfsoße, dazu Reis.</p>
+            <div class="dish-price">€13,50</div>
+          </div>
+        </article>
+
+        <article class="dish-card">
+          <img class="dish-photo" src="assets/menu/tugim-dakgogi.webp" alt="Tugim Dakgogi">
+          <div class="dish-info">
+            <div class="dish-name-row"><span class="dish-name">Tugim Dakgogi<span class="dish-num">#16</span></span></div>
+            <p class="dish-desc">Knusprig frittierte Hähnchenbrust mit gebratenem Gemüse, Reis und Teriyakisauce.</p>
+            <div class="dish-price">€14,50</div>
+          </div>
+        </article>
+
+        <article class="dish-card">
+          <img class="dish-photo" src="assets/menu/tugim-origogi.webp" alt="Tugim Origogi">
+          <div class="dish-info">
+            <div class="dish-name-row"><span class="dish-name">Tugim Origogi<span class="dish-num">#17</span></span></div>
+            <p class="dish-desc">Knusprig frittierte Entenbrust mit gebratenem Gemüse, Reis und Teriyakisauce.</p>
+            <div class="dish-price">€15,50</div>
+          </div>
+        </article>
+
+        <article class="dish-card">
+          <img class="dish-photo" src="assets/menu/yangnim-chicken.webp" alt="Yangnim Chicken">
+          <div class="dish-info">
+            <span class="dish-badge">Beliebt</span>
+            <div class="dish-name-row"><span class="dish-name">Yangnim Chicken<span class="dish-num">#18</span></span></div>
+            <p class="dish-desc">Scharf frittierte Hähnchenschenkel ohne Knochen mit Scharfsauce, dazu Reis.</p>
+            <div class="dish-price">€15,00</div>
+          </div>
+        </article>
+
+        <article class="dish-card">
+          <img class="dish-photo" src="assets/menu/fried-chicken.webp" alt="Fried Chicken">
+          <div class="dish-info">
+            <span class="dish-badge">Beliebt</span>
+            <div class="dish-name-row"><span class="dish-name">Fried Chicken<span class="dish-num">#19</span></span></div>
+            <p class="dish-desc">Frittierte Hähnchenschenkel ohne Knochen mit Soße deiner Wahl, dazu Reis.</p>
+            <div class="dish-price">€14,50</div>
+          </div>
+        </article>
+
+        <article class="dish-card">
+          <img class="dish-photo" src="assets/menu/mandu.webp" alt="Mandu">
+          <div class="dish-info">
+            <span class="dish-badge">Beliebt</span>
+            <div class="dish-name-row"><span class="dish-name">Mandu<span class="dish-num">#22</span></span></div>
+            <p class="dish-desc">Maultaschen mit einer Zutat deiner Wahl.</p>
+            <div class="dish-price">€6,00</div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ REISGERICHTE ============ -->
+  <section class="dish-section" id="reisgerichte">
+    <div class="container">
+      <div class="dish-section-head"><h2>Reisgerichte 🍛</h2><span>5 Gerichte</span></div>
+      <div class="dish-grid">
+
+        <article class="dish-card">
+          <img class="dish-photo" src="assets/menu/kimchi-bokkumbap.webp" alt="Kimchi Bokkumbap">
+          <div class="dish-info">
+            <div class="dish-name-row"><span class="dish-name">Kimchi Bokkumbap<span class="dish-num">#6</span></span></div>
+            <p class="dish-desc">Gebratener Reis mit Kimchi, Zwiebel und Spiegelei.</p>
+            <div class="dish-price">€14,50</div>
+          </div>
+        </article>
+
+        <article class="dish-card">
+          <div class="dish-photo-placeholder"><svg viewBox="0 0 24 24"><use href="#icon-bowl2"/></svg></div>
+          <div class="dish-info">
+            <div class="dish-name-row"><span class="dish-name">Bokkumbap mit Gemüse<span class="dish-num">#7</span></span></div>
+            <p class="dish-desc">Gebratener Reis mit Gemüse und Ei.</p>
+            <div class="dish-price">€13,50</div>
+          </div>
+        </article>
+
+        <article class="dish-card">
+          <img class="dish-photo" src="assets/menu/bokkumbap-haehnchen.webp" alt="Bokkumbap mit Hähnchenfleisch">
+          <div class="dish-info">
+            <div class="dish-name-row"><span class="dish-name">Bokkumbap mit Hähnchenfleisch<span class="dish-num">#8</span></span></div>
+            <p class="dish-desc">Gebratener Reis mit Hähnchenfleisch, Gemüse und Ei.</p>
+            <div class="dish-price">€14,50</div>
+          </div>
+        </article>
+
+        <article class="dish-card">
+          <img class="dish-photo" src="assets/menu/gimbap.webp" alt="Gimbap">
+          <div class="dish-info">
+            <div class="dish-name-row"><span class="dish-name">Gimbap<span class="dish-num">#20</span></span></div>
+            <p class="dish-desc">Reisrolle in Seetangblättern mit verschiedenem Gemüse und Krabbenfleisch (auf Wunsch ohne).</p>
+            <div class="dish-price">€8,00</div>
+          </div>
+        </article>
+
+        <article class="dish-card">
+          <img class="dish-photo" src="assets/menu/frittierte-gimbap.webp" alt="Frittierte Gimbap">
+          <div class="dish-info">
+            <div class="dish-name-row"><span class="dish-name">Frittierte Gimbap<span class="dish-num">#21</span></span></div>
+            <p class="dish-desc">Frittierte Reisrolle in Seetangblättern mit verschiedenem Gemüse und Krabbenfleisch (auf Wunsch ohne).</p>
+            <div class="dish-price">€9,00</div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ NUDELGERICHTE ============ -->
+  <section class="dish-section" id="nudelgerichte">
+    <div class="container">
+      <div class="dish-section-head"><h2>Nudelgerichte 🍜</h2><span>3 Gerichte</span></div>
+      <div class="dish-grid">
+
+        <article class="dish-card">
+          <div class="dish-photo-placeholder"><svg viewBox="0 0 24 24"><use href="#icon-bowl2"/></svg></div>
+          <div class="dish-info">
+            <div class="dish-name-row"><span class="dish-name">Bokkummyun mit Gemüse<span class="dish-num">#9</span></span></div>
+            <p class="dish-desc">Gebratene Nudeln mit Gemüse und Ei.</p>
+            <div class="dish-price">€13,50</div>
+          </div>
+        </article>
+
+        <article class="dish-card">
+          <img class="dish-photo" src="assets/menu/bokkummyun-haehnchen.webp" alt="Bokkummyun mit Hähnchenfleisch">
+          <div class="dish-info">
+            <div class="dish-name-row"><span class="dish-name">Bokkummyun mit Hähnchenfleisch<span class="dish-num">#10</span></span></div>
+            <p class="dish-desc">Gebratene Nudeln mit Hähnchenfleisch, Gemüse und Ei.</p>
+            <div class="dish-price">€14,50</div>
+          </div>
+        </article>
+
+        <article class="dish-card">
+          <div class="dish-photo-placeholder"><svg viewBox="0 0 24 24"><use href="#icon-bowl2"/></svg></div>
+          <div class="dish-info">
+            <div class="dish-name-row"><span class="dish-name">Bokkummyun mit Garnelen<span class="dish-num">#11</span></span></div>
+            <p class="dish-desc">Gebratene Nudeln mit Garnelen, Ei und Gemüse.</p>
+            <div class="dish-price">€15,00</div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BEILAGEN ============ -->
+  <section class="simple-section" id="beilagen">
+    <div class="container">
+      <div class="dish-section-head"><h2>Beilagen 🍚</h2><span>1 Beilage</span></div>
+      <ul class="simple-list">
+        <li class="simple-row">
+          <span class="simple-row-name">Reis<span class="simple-row-desc">Gekochter asiatischer Reis</span></span>
+          <span class="simple-row-price">€2,50</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ GETRÄNKE ============ -->
+  <section class="simple-section" id="getraenke">
+    <div class="container">
+      <div class="dish-section-head"><h2>Alkoholfreie Getränke 🥤</h2><span>9 Getränke</span></div>
+      <ul class="simple-list">
+        <li class="simple-row">
+          <span class="simple-row-name">Vio Still 0,5 l<span class="simple-row-desc">Natürliches Mineralwasser ohne Kohlensäure</span></span>
+          <span class="simple-row-price">€3,00</span>
+        </li>
+        <li class="simple-row">
+          <span class="simple-row-name">Vio Spritzig 0,5 l<span class="simple-row-desc">Natürliches Mineralwasser mit Kohlensäure</span></span>
+          <span class="simple-row-price">€3,00</span>
+        </li>
+        <li class="simple-row">
+          <span class="simple-row-name">Coca-Cola® 0,5 l<span class="simple-row-desc">Koffeinhaltiges Erfrischungsgetränk</span></span>
+          <span class="simple-row-price">€3,75</span>
+        </li>
+        <li class="simple-row">
+          <span class="simple-row-name">Coca-Cola® Zero 0,5 l<span class="simple-row-desc">Kalorienfrei, koffeinhaltig, zuckerfrei</span></span>
+          <span class="simple-row-price">€3,75</span>
+        </li>
+        <li class="simple-row">
+          <span class="simple-row-name">Fanta 0,5 l<span class="simple-row-desc">Kohlensäurehaltig, mit Orangengeschmack</span></span>
+          <span class="simple-row-price">€3,75</span>
+        </li>
+        <li class="simple-row">
+          <span class="simple-row-name">Sprite 0,5 l<span class="simple-row-desc">Mit Zitronen- und Limettengeschmack</span></span>
+          <span class="simple-row-price">€3,75</span>
+        </li>
+        <li class="simple-row">
+          <span class="simple-row-name">Lotte Chilsung Cider 0,33 l<span class="simple-row-desc">Kohlensäurehaltig, mit Zitrusgeschmack</span></span>
+          <span class="simple-row-price">€2,75</span>
+        </li>
+        <li class="simple-row">
+          <span class="simple-row-name">Milkis 0,25 l<span class="simple-row-desc">Erfrischungsgetränk mit Milch- und Fruchtaroma</span></span>
+          <span class="simple-row-price">€2,75</span>
+        </li>
+        <li class="simple-row">
+          <span class="simple-row-name">Yuzuka Yuzu-Limonade 0,33 l<span class="simple-row-desc">Kohlensäurehaltig, mit Yuzu-Zitronengeschmack</span></span>
+          <span class="simple-row-price">€4,00</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ FOOT CTA ============ -->
+  <div class="menu-page-foot">
+    <div class="container">
+      <p>Appetit bekommen? Bestellt über Wolt, Uber Eats oder Lieferando — oder kommt einfach vorbei.</p>
+      <a href="index.html#order" class="btn btn-primary">Jetzt bestellen</a>
+    </div>
+  </div>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand">
+          <svg viewBox="0 0 400 400" style="--crimson:#a81f2d; --gold:#e9c67b;"><use href="#logo-badge"/></svg>
+          <span>Seoul Kitchen<span class="brand-sub" style="color:#e9c67b;">im Hafen · Düsseldorf</span></span>
+        </a>
+        <p>Hausgemachte koreanische Gerichte am Düsseldorfer Medienhafen — frisch, schnell und den Weg ans Wasser wert.</p>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/seoulkitchenimhafen" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><use href="#icon-insta"/></svg></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h5>Entdecken</h5>
+        <ul>
+          <li><a href="menu.html">Speisekarte</a></li>
+          <li><a href="index.html#bewertungen">Bewertungen</a></li>
+          <li><a href="index.html#order">Bestellen</a></li>
+          <li><a href="index.html#visit">Anfahrt</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Bestellen</h5>
+        <ul>
+          <li><a href="https://wolt.com/en/deu/dusseldorf/restaurant/seoul-kitchen-neckarstrasse?srsltid=AfmBOooCRmc80H0mNJdryHwr1PW15DmDsGkSPhAyktWx3p9UtdB1E4yQ" target="_blank" rel="noopener">Wolt</a></li>
+          <li><a href="https://www.ubereats.com/de-en/store/seoul-kitchen-im-medienhafen/Em-YU3mrXCmFtOS9ZdHRyA?srsltid=AfmBOooQ-R_CGeqImIwzBNKBwVt7LoH9Y2u2TPbvu3luBzCDB6OTpp7V" target="_blank" rel="noopener">Uber Eats</a></li>
+          <li><a href="https://www.seoulkitchenimhafendusseldorf.de/" target="_blank" rel="noopener">Lieferando</a></li>
+          <li><a href="https://seoul-kitchen-im-hafen-dusseldorf.order.app.hd.digital/menus" target="_blank" rel="noopener">Direkt bestellen</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Kontakt</h5>
+        <ul>
+          <li><span>Neckarstraße 4, 40219 Düsseldorf</span></li>
+          <li><a href="tel:+492119425797">0211 94257979</a></li>
+          <li><a href="mailto:seoulkitchenimhafen@gmail.com">seoulkitchenimhafen@gmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Seoul Kitchen im Hafen. Alle Rechte vorbehalten.</span>
+      <span>Neckarstraße 4, 40219 Düsseldorf</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
