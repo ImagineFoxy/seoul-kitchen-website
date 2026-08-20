@@ -42,7 +42,7 @@ body{
 img{ max-width: 100%; display: block; }
 a{ color: inherit; text-decoration: none; }
 ul{ list-style: none; margin: 0; padding: 0; }
-h1,h2,h3,h4{ margin: 0; font-weight: 700; }
+h1,h2,h3,h4,h5{ margin: 0; font-weight: 700; }
 p{ margin: 0; }
 section{ position: relative; }
 .container{
@@ -361,18 +361,19 @@ section{ position: relative; }
 .hero-chip h5{
   font-family: var(--font-body);
   font-weight: 700;
-  font-size: 15.5px;
+  font-size: 16px;
   color: var(--ink);
-  line-height: 1.25;
+  line-height: 1.3;
   display: flex;
   align-items: center;
   gap: 8px;
 }
 .hero-chip-sub{
   display: block;
-  margin-top: 2px;
-  font-size: 13px;
-  color: var(--ink-soft);
+  margin-top: 1px;
+  font-size: 14px;
+  line-height: 1.4;
+  color: rgba(30,20,15,0.55);
   letter-spacing: 0.01em;
 }
 .hero-chip-icon{
