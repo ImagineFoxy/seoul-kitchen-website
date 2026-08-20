@@ -941,10 +941,9 @@ section{ position: relative; }
 .dish-photo{
   width: 96px; height: 96px;
   border-radius: 12px;
-  object-fit: contain;
+  object-fit: cover;
   flex-shrink: 0;
   background: var(--cream);
-  padding: 6px;
 }
 .dish-photo-placeholder{
   width: 96px; height: 96px;

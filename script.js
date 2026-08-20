@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const price = card.querySelector('.dish-price')?.textContent.trim() || '';
 
       if (photo) {
-        modalImg.src = photo.src;
+        modalImg.src = photo.dataset.full || photo.src;
         modalImg.alt = photo.alt;
         modalImg.style.display = '';
         modalPlaceholder.style.display = 'none';
