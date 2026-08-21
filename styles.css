@@ -581,6 +581,13 @@ section{ position: relative; }
   color: var(--ink);
   margin-top: 12px;
 }
+.menu-card-num{
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--gold-dp);
+  margin-left: 4px;
+}
 .menu-card p{
   margin-top: 10px;
   font-size: 14.5px;
