@@ -40,7 +40,7 @@ Or open `index.html` directly in a browser (all assets are relative paths).
 
 ## Deploying
 
-Any static host works: drag the repo folder into Netlify, connect it on Vercel, or enable GitHub Pages on this repo (serve from the `main` branch, root directory).
+Live on Vercel at [seoul-kitchen-im-hafen.de](https://seoul-kitchen-im-hafen.de), deployed from the `main` branch.
 
 ## Content status
 
